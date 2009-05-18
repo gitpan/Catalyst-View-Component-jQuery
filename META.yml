@@ -3,6 +3,7 @@ abstract: 'Add a JavaScript::Framework::jQuery object to TT Views'
 author:
   - 'David P.C. Wollmann <converter42 at gmail.com>'
 build_requires:
+  Catalyst::View::TT: 0.29
   ExtUtils::MakeMaker: 6.42
   Test::More: 0
 configure_requires:
@@ -23,4 +24,4 @@ requires:
   Moose: 0.79
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03
