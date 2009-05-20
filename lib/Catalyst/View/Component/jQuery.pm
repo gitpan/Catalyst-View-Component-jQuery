@@ -6,7 +6,7 @@ requires qw( render );
 
 use JavaScript::Framework::jQuery;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 has '_jquery_obj' => (
     is => 'ro',
