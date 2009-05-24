@@ -17,11 +17,15 @@ meta-spec:
 name: Catalyst-View-Component-jQuery
 no_index:
   directory:
+    - examples
     - inc
     - t
 requires:
+  Catalyst::Plugin::ConfigLoader: 0.23
+  Catalyst::Test: 0
   JavaScript::Framework::jQuery: 0.01
   Moose: 0.79
+  perl: 5.8.0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.04
+version: 0.05

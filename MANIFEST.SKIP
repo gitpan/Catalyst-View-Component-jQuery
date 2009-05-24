@@ -1,3 +1,4 @@
+\.releaserc
 \.git/
 \.svn/
 blib

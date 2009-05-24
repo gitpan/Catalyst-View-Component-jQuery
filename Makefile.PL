@@ -10,6 +10,8 @@ test_requires 'Catalyst::View::TT', '0.29';
 
 requires 'Moose', '0.79';
 requires 'JavaScript::Framework::jQuery', '0.01';
+requires 'Catalyst::Plugin::ConfigLoader', '0.23';
+requires 'Catalyst::Test';
 
 auto_install;
 

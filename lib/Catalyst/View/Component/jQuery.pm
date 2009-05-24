@@ -1,12 +1,24 @@
 package Catalyst::View::Component::jQuery;
 
+use 5.008_000;
+
+use warnings;
+use strict;
 use Carp ('croak');
 use Moose::Role;
 requires qw( render );
 
+=begin foolcpants
+
+use warnings;
+use strict;
+
+=cut
+
 use JavaScript::Framework::jQuery;
 
-our $VERSION = '0.04';
+our $VERSION;
+$VERSION = '0.05';
 
 has '_jquery_obj' => (
     is => 'ro',
@@ -60,7 +72,7 @@ sub _build__jquery_obj {
         croak "JavaScript::Framework::jQuery constructor failed because $@";
     }
     unless ($obj) {
-        croak "JavaScript::Framework::jQuery constructor failed but did indicated why.";
+        croak "JavaScript::Framework::jQuery constructor failed but did not give a reason.";
     }
 
     return $obj;
@@ -207,6 +219,9 @@ sub jquery {
     $_[0]->_jquery_obj;
 }
 
+1; # End of Catalyst::View::Component::jQuery
+
+=pod
 
 =head1 AUTHOR
 
@@ -253,7 +268,7 @@ L<http://search.cpan.org/dist/Catalyst-View-Component-jQuery/>
 
 L<JavaScript::Framework::jQuery>, L<CatalystX::Menu::Suckerfish>, L<Moose>, L<Moose::Role>, L<Catalyst>, L<perl>
 
-=head1 COPYRIGHT & LICENSE
+=head1 COPYRIGHT AND LICENSE
 
 Copyright 2009 David P.C. Wollmann, all rights reserved.
 
@@ -262,4 +277,3 @@ under the same terms as Perl itself.
 
 =cut
 
-1; # End of Catalyst::View::Component::jQuery
